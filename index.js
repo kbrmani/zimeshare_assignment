@@ -5,13 +5,14 @@ let allProducts = []; // Variable to store fetched products
 initialResult();
 
 function initialResult() {
-  fetch('http://localhost:5000/api/products')
+  fetch('https://zimeshare-assignment-backend.onrender.com/api/products')
     .then(response => response.json())
     .then(data => {
       allProducts = data[0].products; // Store fetched products in allProducts
       displayProducts(allProducts); // Display initial products
     });
 }
+
 
 // Function to display products
 function displayProducts(products) {
